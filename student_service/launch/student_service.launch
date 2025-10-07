@@ -1,0 +1,21 @@
+<launch>
+    <!-- roslaunch 会自动启动 roscore -->
+
+    <!-- 可传参覆盖：roslaunch student_service student_service.launch json_file:=/abs/path/students.json verbose:=true auto_reload:=true reload_interval:=2.0 preview:=3 -->
+    <arg name="json_file" default="$(find student_service)/data/students.json" />
+    <arg name="verbose" default="true" />
+    <arg name="auto_reload" default="true" />
+    <arg name="reload_interval" default="2.0" />
+    <arg name="preview" default="3" />
+
+    <node pkg="student_service"
+                type="student_service_server.py"
+                name="student_service_server"
+                output="screen">
+        <param name="json_file" value="$(arg json_file)" />
+        <param name="verbose" value="$(arg verbose)" />
+        <param name="auto_reload" value="$(arg auto_reload)" />
+        <param name="reload_interval" value="$(arg reload_interval)" />
+        <param name="log_preview_count" value="$(arg preview)" />
+    </node>
+</launch>

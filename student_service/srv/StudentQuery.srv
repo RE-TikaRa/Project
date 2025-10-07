@@ -1,0 +1,4 @@
+int32 student_id
+---
+string name
+float32 score
