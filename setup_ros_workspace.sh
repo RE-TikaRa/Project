@@ -36,7 +36,7 @@ if [ -d "Project" ]; then
     echo "警告: Project目录已存在，正在删除..."
     rm -rf Project
 fi
-git clone -b main https://github.com/RE-TikaRa/Project.git
+git clone -b main https://github.com.cnpmjs.org/RE-TikaRa/Project.git
 echo "✓ 项目克隆完成"
 
 # 7. 给克隆下来的所有文件添加执行权限
