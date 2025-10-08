@@ -9,8 +9,8 @@ project(student_service)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   rospy
-  roscpp
   std_msgs
+  roscpp
   message_generation
 )
 
@@ -103,12 +103,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES student_service
-   CATKIN_DEPENDS rospy std_msgs
-   std_msgs
-   message_runtime
+    CATKIN_DEPENDS rospy std_msgs message_runtime
 )
+
 
 ###########
 ## Build ##
